@@ -6,7 +6,7 @@ body {
 }
 
 /* include external fonts */
-/* look at photosolutions proj */
-/* @include "../fonts/" */
+/* tree structure: ROOT/fonts/FOLDER_FONT_NAME/FOLDER_WITH_FONT_CSS&FOLDER_WITH_CONVERTED_FONT */
+/* @import url("../fonts/font_awesome/css/font-awesome.min.css"); */
 
 @import "lib/ant-lib";

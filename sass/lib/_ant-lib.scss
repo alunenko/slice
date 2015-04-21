@@ -1,7 +1,18 @@
+/**
+ * Style templates
+ * by Antoni Lunenko antoni.lunenko@gmail.com
+ */
+
 %clr {
 	&:after {
 		content: '';
 		display: table;
 		clear: both;
 	}
+}
+
+@mixin vertical-middle($height) {
+  display: table-cell;
+  vertical-align: middle;
+  height: $height;
 }
