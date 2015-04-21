@@ -1,1 +1,12 @@
 @import "compass/reset";
+
+/* for 1em = 10px */
+body {
+	font-size: 65%;
+}
+
+/* include external fonts */
+/* look at photosolutions proj */
+/* @include "../fonts/" */
+
+@import "lib/ant-lib";
