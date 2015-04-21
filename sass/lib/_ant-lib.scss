@@ -3,6 +3,7 @@
  * by Antoni Lunenko antoni.lunenko@gmail.com
  */
 
+/* clear */
 %clr {
 	&:after {
 		content: '';
@@ -11,8 +12,62 @@
 	}
 }
 
+/** for links <a>
+  * NOUnderline at first statement, by hover Underline
+  * and other way
+  */
+%link-nou {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+%link-u {
+    text-decoration: underline;
+    &:hover {
+	    text-decoration: none;
+    }
+}
+
+/** create a vertical align on cell
+  * in this case we give one parametr, which call height
+  * this mean, which your row height need
+  */
 @mixin vertical-middle($height) {
   display: table-cell;
   vertical-align: middle;
   height: $height;
 }
+
+/** start b-td-level
+  * align content at horizontal
+  * after align vertical
+  * at blocks/_lib/lib.html
+*/
+.b-td-level {
+	width: 50px;
+}
+
+[class^='b-td-'] {
+	margin-left: 10px;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	>div {
+		display: table;
+		text-align: center;
+	}
+}
+
+.m-for-text-align {
+	width: 100%;
+}
+
+/* this val say our row height */
+$b-tr-height: 35px;
+/* and we can create very useful and unique classname */
+.b-tr-height#{$b-tr-height} {
+    @include vertical-middle($b-tr-height);
+}
+/* end b-td-level */
