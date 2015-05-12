@@ -40,6 +40,12 @@
   height: $height;
 }
 
+/* transition */
+@mixin transition_my($property: all, $time: .3s) {
+  @include transition-property($property);
+  @include transition-duration($time);
+}
+
 /** start b-td-level
   * align content at horizontal
   * after align vertical
